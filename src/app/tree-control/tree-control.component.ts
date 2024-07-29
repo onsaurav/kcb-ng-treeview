@@ -12,12 +12,17 @@ import { TreeviewComponent } from '../treeview/treeview.component'; // Import Tr
 export class TreeControlComponent implements OnChanges, AfterViewInit {
   @Input() nodes: any[] = [];
   @Input() steps: number = 1;
+  @Input() fixedStep: number = NaN;
+
+  treeBoxWidth = "30%";
 
   treeViews: any[] = [];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.nodes || this.steps) {
       this.updateTreeViews();
+
+      this.treeBoxWidth = (this.steps == 0 ? "30%" : (90/this.steps) + "%" );
     }
   }
 

@@ -1,8 +1,11 @@
 <div class="container">
-    <div class="treeview-container">
-      <ng-container *ngFor="let treeNodes of treeViews">
-        <app-treeview [nodes]="treeNodes" [expandable]="false" [expandAll]="false"></app-treeview>
-      </ng-container>
-    </div>
+  <div class="treeview-container">
+    <ng-container *ngFor="let treeNodes of treeViews; let i = index">
+      <app-treeview class="treeViewBox" [style.max-width]="treeBoxWidth"
+        [nodes]="treeNodes"
+        [expandable]="i === fixedStep ? false : true"
+        [expandAll]="i === fixedStep ? false : true">
+      </app-treeview>
+    </ng-container>
   </div>
-  
+</div>

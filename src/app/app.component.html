@@ -2,7 +2,11 @@
   <div class="content">
     <h1>Tree Control Example</h1>
     <hr />
-    <app-tree-control [nodes]="treeData" [steps]="steps"></app-tree-control>
+    <app-tree-control [nodes]="treeData" [steps]="steps" [fixedStep] = "0"></app-tree-control>
+
+    <hr />
+    <app-tree-control [nodes]="treeData" [steps]="2" [fixedStep] = "0"></app-tree-control>
+
   </div>
 </main>
 

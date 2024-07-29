@@ -14,6 +14,11 @@
   app-treeview {
     flex: 1;
     min-width: 0; /* Prevent shrinking below the minimum width */
-    max-width: 30%; /* Ensure the treeviews fit side by side */
+    /* max-width: 30%; */ /* Ensure the treeviews fit side by side */
   }
   
+  .treeViewBox{
+    border:1px solid lightgray; 
+    padding:10px; 
+    border-radius:10px;
+  }
