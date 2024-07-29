@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="treeview-container">
+      <ng-container *ngFor="let treeNodes of treeViews">
+        <app-treeview [nodes]="treeNodes" [expandable]="false" [expandAll]="false"></app-treeview>
+      </ng-container>
+    </div>
+  </div>
+  

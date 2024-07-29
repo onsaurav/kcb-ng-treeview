@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .treeview-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* Adjust the space between treeviews */
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+  }
+  
+  app-treeview {
+    flex: 1;
+    min-width: 0; /* Prevent shrinking below the minimum width */
+    max-width: 30%; /* Ensure the treeviews fit side by side */
+  }
+  
