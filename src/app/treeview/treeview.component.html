@@ -1,0 +1,16 @@
+<div class="container">
+    <ng-container *ngFor="let node of nodes; let i = index">
+      <details [open]="isNodeOpen(i)">
+        <summary (click)="toggleNode(i)">
+          <input type="checkbox" [checked]="node.checked" (change)="toggleCheckbox(node)" />
+          <span>{{ node.label }}</span>
+        </summary>
+        <div *ngIf="node.children && isNodeOpen(i)" class="folder">
+          <ng-container *ngFor="let child of node.children">
+            <app-treeview [nodes]="[child]" [expandable]="false" [expandAll]="expandAll"></app-treeview>
+          </ng-container>
+        </div>
+      </details>
+    </ng-container>
+  </div>
+  

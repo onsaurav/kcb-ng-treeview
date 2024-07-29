@@ -1,0 +1,13 @@
+<main class="main">
+  <div class="content">
+    <h1>Treeview Example</h1>
+    <hr />
+    <div class="treeview-container">
+      <app-treeview [nodes]="treeData" [expandable]="false" [expandAll]="false"></app-treeview>
+      <app-treeview [nodes]="treeData" [expandable]="true" [expandAll]="true"></app-treeview>
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
+

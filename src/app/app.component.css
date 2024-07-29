@@ -1,0 +1,35 @@
+body {
+    background: #222;
+    color: #aaa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  main.main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your desired maximum width */
+    margin: 0 auto;
+  }
+  
+  h1 {   
+    text-align: center;
+  }
+  
+  .treeview-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Adjust the gap between the treeviews */
+  }
+  
+  app-treeview {
+    flex: 1;
+    min-width: 0; /* Prevent shrinking below the minimum width */
+    max-width: 48%; /* Ensure there’s some space between the two treeviews */
+  }
+  
